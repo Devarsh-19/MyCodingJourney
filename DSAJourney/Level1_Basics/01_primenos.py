@@ -17,7 +17,7 @@ def check_prime_1(n : int) -> bool:
         if n % i == 0:
             return False
 
-    return False
+    return True
 
 
 def check_prime_2(n: int) -> bool:
@@ -37,3 +37,6 @@ def check_prime_2(n: int) -> bool:
         i += 6
 
     return True
+
+if __name__ == "__main__":
+    print(check_prime_1(7))
