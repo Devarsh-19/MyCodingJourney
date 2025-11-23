@@ -7,7 +7,7 @@ Problem:
 """
 
 
-def is_divisible_without_mod(n, d):
+def is_divisible(n, d):
     if d == 0:
         raise ValueError("Divisor d cannot be zero.")
 
