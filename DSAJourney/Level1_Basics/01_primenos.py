@@ -3,9 +3,10 @@
 Problem:
     Given an integer n, determine whether it is a prime number.
 """
+import math
+
 
 # approach 1 - brute force
-
 def check_prime_1(n : int) -> bool:
     if n <=1:
         return False
@@ -18,8 +19,22 @@ def check_prime_1(n : int) -> bool:
 
     return True
 
-
+# trial division
 def check_prime_2(n: int) -> bool:
+    if n == 2:
+        return True
+
+    if n % 2 == 0:
+        return False
+    for i in range(3, int(math.sqrt(n))+1 , 2):
+        if n % i == 0:
+            return  False
+
+    return True
+
+
+# 6k+- 1 optimization
+def check_prime_3(n: int) -> bool:
     if n <= 1:
         return False
     if n <= 3:
